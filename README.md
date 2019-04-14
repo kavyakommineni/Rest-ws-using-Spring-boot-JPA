@@ -4,14 +4,23 @@ Created REST web services using Spring boot and JPA using GET, POST, PUT, DELETE
 For POST, PUT and DELETE operations I've used POSTMAN google extension.
 Used in-memory database which is H2 database.
 To use other database, we need to put the corresponding Maven dependency and configure the driver connections in application.properties file as below:
+
 DataBase related
+
 spring.datasource.url=jdbc:mysql://localhost:port/databasename
+
 spring.datasource.username=username
+
 spring.datasource.password=password
+
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+
 JPA related
+
 spring.jpa.show-sql=true // Shows the sql queries in the log related to JPA
+
 spring.jpa.hibernate.dialect=org.hibernate.dialect.SQLServer2012Dialect  // Corresponding database Dialect
+
 spring.jpa.hibernate.ddl-auto = create //creates the tables of the database everytime we start the server and the application.
 
 Created front end application which makes use of the above created REST services by calling using RestTemplate.
